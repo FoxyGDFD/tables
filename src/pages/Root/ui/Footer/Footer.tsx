@@ -29,7 +29,7 @@ export const Footer: FC = () => {
           as='a'
           className='p-0'
           buttonType='text'
-          href='mailto:litan777@yandex.ru&body=привет'
+          href='mailto:litan777@yandex.ru'
         >
           litan777@yandex.ru
         </Button>

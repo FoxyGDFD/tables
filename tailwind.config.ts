@@ -19,6 +19,7 @@ export default {
         20: '20px',
       },
       colors: {
+        'blue-100': '#D8DEF5',
         'blue-400': '#547DE6',
         'blue-500': '#2358E1',
         'blue-600': '#1A43AD',
@@ -26,6 +27,7 @@ export default {
         'grey-100': '#F2F3F5',
         'grey-300': '#B3B5BB',
         'grey-400': '#93959D',
+        'grey-600': '#484D59',
       },
       borderRadius: {
         12: '12px',
@@ -35,7 +37,6 @@ export default {
         hbounce: {
           '0%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(10%)' },
-          // '60%': { transform: 'translateX(-15%)' },
           '100%': { transform: 'translateX(0)' },
         },
       },

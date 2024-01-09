@@ -1,5 +1,6 @@
+import { RequestButton } from '@features';
 import { CSSProperties, FC } from 'react';
-import { Box, Button, Typography } from 'simplify-dev';
+import { Box, Typography } from 'simplify-dev';
 import bgImage from '../assets/bg.png';
 import { Navbar } from './ui/Navbar';
 
@@ -26,12 +27,7 @@ export const MainHeader: FC = () => {
             Производим внутреннюю и наружную рекламу, вывески, указатели,
             таблички и стенды
           </Typography>
-          <Button
-            as='a'
-            className='text-blue-500 bg-grey-50 col-span-1 sm:w-[180px] max-xl:col-span-2 max-sm:col-span-3 max-sm:col-end-4 col-end-2 rounded-8 font-medium'
-          >
-            Оставить заявку
-          </Button>
+          <RequestButton className='col-span-1 sm:w-[180px] max-xl:col-span-2 max-sm:col-span-3 max-sm:col-end-4 col-end-2 rounded-8 font-medium' />
         </Box>
       </Box>
     </Box>

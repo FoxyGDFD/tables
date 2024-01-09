@@ -18,7 +18,7 @@ export const PartitionCard: FC<Partition> = ({ title, desctiption }) => {
     <BaseCard className='flex flex-col gap-[16px] w-full'>
       <Typography className='font-medium text-[22px]'>{title}</Typography>
       <Box className='flex gap-[16px] justify-between h-full'>
-        <Typography as='span' className='text-[14px] font-medium text-grey-500'>
+        <Typography as='span' className='text-[14px] text-grey-500  self-end'>
           {desctiption}
         </Typography>
         <Button
@@ -26,7 +26,7 @@ export const PartitionCard: FC<Partition> = ({ title, desctiption }) => {
           onClick={onClick}
           className='hover:animate-hbounce rounded-full border-[2px] border-grey-300 p-0 h-[28px] w-[28px] self-end'
         >
-          <Arrow className='w-[24px]' />
+          <Arrow className='fill-grey-600 w-[24px]' />
         </Button>
       </Box>
     </BaseCard>
