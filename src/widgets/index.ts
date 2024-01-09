@@ -1,1 +1,2 @@
-export * from './Partition/Partition.tsx';
+export * from './Error';
+export * from './PartitionList/PartitionList.tsx';

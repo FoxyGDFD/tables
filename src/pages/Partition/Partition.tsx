@@ -1,16 +1,14 @@
 import sections from '@pages/Main/assets/sections.json' assert { type: 'json' };
-import { CardList, Section } from '@shared/cards';
 import {
   Partition as PartitionHeaderProps,
   usePartialHeaderStore,
 } from '@shared/store';
-import { useEffect } from 'react';
+import { NotFound, PartitionList } from '@widgets';
+import { FC, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Typography } from 'simplify-dev';
 
-export const Partition = () => {
+export const Partition: FC = () => {
   const { pathname } = useLocation();
-
   const patrition = sections.data.find(
     ({ title }: PartitionHeaderProps) =>
       title === decodeURI(pathname?.substring(1))
@@ -30,25 +28,16 @@ export const Partition = () => {
   });
 
   useEffect(() => {
-    if (patrition) setState(patrition);
+    setState(patrition || { title: 'Такой страницы не существует' });
   }, [patrition, setState]);
 
   return (
-    <Section title='Примеры выполненных заказов'>
-      {titles.length > 1 ? (
-        titles.map(title => (
-          <Box as='article' key={title} className='mt-[32px]'>
-            <Typography as='h4' className='font-medium'>
-              {title}
-            </Typography>
-            <CardList
-              list={images.filter(url => url.split('/')[7] === title)}
-            />
-          </Box>
-        ))
+    <>
+      {title !== 'Такой страницы не существует' ? (
+        <PartitionList titles={titles} images={images} />
       ) : (
-        <CardList list={images} />
+        <NotFound />
       )}
-    </Section>
+    </>
   );
 };
