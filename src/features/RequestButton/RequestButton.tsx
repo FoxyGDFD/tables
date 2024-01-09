@@ -1,5 +1,5 @@
 import Arrow from '@features/PartitionCard/assets/arrow.svg?react';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Button } from 'simplify-dev';
 
 interface RequestButtonProps {

@@ -1,5 +1,5 @@
-import { ImageCard, PartitionCard, RequestButton } from '@features';
-import { BaseCard, Section } from '@shared/cards';
+import { PartitionCard, RequestButton } from '@features';
+import { BaseCard, CardList, Section } from '@shared/cards';
 import { Partition } from '@shared/store';
 import { FC } from 'react';
 import { Box, Typography } from 'simplify-dev';
@@ -16,14 +16,11 @@ const images = [miigaik, cuscovo, rosArchive, davidovsky, vitte, ntm];
 export const Main: FC = () => {
   return (
     <Box className='p-[26px]'>
-      <Section
+      <CardList
         title='Нам доверяют'
         className='grid grid-cols-6 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 justify-items-center gap-[16px] grid-flow-row'
-      >
-        {images.map((url: string, index: number) => (
-          <ImageCard img={url} key={'image-' + index} />
-        ))}
-      </Section>
+        list={images}
+      />
       <Section
         title='Мы изготавливаем'
         className='grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 justify-items-center gap-[16px] grid-flow-row'
