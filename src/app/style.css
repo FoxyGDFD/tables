@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  display: grid;
+  min-height: 100vh;
+  align-content: space-between;
+}
+
+* {
+  font-family: Inter, sans-serif;
+}
