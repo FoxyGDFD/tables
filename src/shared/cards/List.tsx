@@ -8,6 +8,9 @@ interface ListProps {
   title?: string;
 }
 
+const getImageUrl = (url: string) =>
+  window.location.origin + '/tables' + new URL(url, import.meta.url).pathname;
+
 export const CardList: FC<ListProps> = ({ title, list, className }) => (
   <>
     {title && (
@@ -23,7 +26,7 @@ export const CardList: FC<ListProps> = ({ title, list, className }) => (
     >
       {list.map((url: string, index: number) => (
         <ImageCard
-          img={new URL(url, import.meta.url).href.replace('public/', '')}
+          img={getImageUrl(url).replace('public/', '')}
           key={'img-' + ' ' + index}
         />
       ))}

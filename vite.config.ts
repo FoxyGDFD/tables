@@ -30,6 +30,7 @@ export default defineConfig({
   build: {
     // copyPublicDir: false,
     target: 'es2020',
+    assetsInlineLimit: 0,
   },
   root: '.',
 });
