@@ -22,7 +22,10 @@ export const CardList: FC<ListProps> = ({ title, list, className }) => (
       }
     >
       {list.map((url: string, index: number) => (
-        <ImageCard img={url} key={'img-' + ' ' + index} />
+        <ImageCard
+          img={new URL(url, import.meta.url).href.replace('public/', '')}
+          key={'img-' + ' ' + index}
+        />
       ))}
     </Box>
   </>

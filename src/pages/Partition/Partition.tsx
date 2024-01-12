@@ -7,24 +7,35 @@ import { NotFound, PartitionList } from '@widgets';
 import { FC, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+// В структуре папок с изображениями под 5 индексом находятся названия разделов для страниц с совмещёнными разделами
+export const partitionTitleIndex = 5;
+
 export const Partition: FC = () => {
   const { pathname } = useLocation();
   const patrition = sections.data.find(
     ({ title }: PartitionHeaderProps) =>
-      title === decodeURI(pathname?.substring(1))
+      title === decodeURI(pathname?.split('/')[2])
   );
   const { setState, title } = usePartialHeaderStore();
 
-  const glob = import.meta.glob('/src/widgets/Partition/assets/**/*');
-  const images = Object.keys(glob).filter(name => {
+  const glob = Object.keys(
+    import.meta.glob('/**/*.{png,jpg,jpeg,PNG,JPEG}', {
+      eager: true,
+    })
+  );
+  const images = glob.filter(name => {
     return name.split('/').includes(title || '');
   });
 
   const titles: string[] = [];
   images?.forEach(src => {
     const path = src.split('/');
-    if (!titles.includes(path[7]) && path.includes('совмещенные разделы'))
-      titles.push(path[7]);
+    const partitionTitle = path[partitionTitleIndex];
+    if (
+      !titles.includes(partitionTitle) &&
+      path.includes('совмещенные разделы')
+    )
+      titles.push(partitionTitle);
   });
 
   useEffect(() => {

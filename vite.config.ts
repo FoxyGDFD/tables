@@ -21,4 +21,14 @@ export default defineConfig({
       '@shared': path.resolve(__dirname, './src/shared'),
     },
   },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'es2020',
+    },
+  },
+  build: {
+    // copyPublicDir: false,
+    target: 'es2020',
+  },
+  root: '.',
 });

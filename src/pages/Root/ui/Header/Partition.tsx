@@ -13,7 +13,7 @@ export const PartitionHeader: FC<Partition> = ({ title, desctiption }) => {
             as='h1'
             className='col-span-3 max-xl:col-span-3 col-end-4 text-white w-full text-[54px] font-semibold max-sm:text-[36px]'
           >
-            {title}
+            {title || 'Такой страницы не существует'}
           </Typography>
           <Typography
             as='h3'

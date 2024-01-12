@@ -11,7 +11,7 @@ export const PartitionCard: FC<Partition> = ({ title, desctiption }) => {
 
   const onClick = () => {
     setState({ title, desctiption });
-    navigate(title ? `/${encodeURI(title)}` : '/not-found');
+    navigate(title ? `${encodeURI(title)}` : '/not-found');
   };
 
   return (
