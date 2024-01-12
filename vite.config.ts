@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'https://foxygdfd.github.io/tables/',
   plugins: [
     react(),
     svgr({
