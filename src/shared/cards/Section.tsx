@@ -7,7 +7,7 @@ interface SectionProps extends PropsWithChildren {
 }
 
 export const Section: FC<SectionProps> = ({ children, title, className }) => (
-  <Box as='section' className='my-[100px]'>
+  <Box as='section' className='my-[100px] p-[26px]'>
     {title && (
       <Typography as='h2' className='text-blue-500 font-medium mb-[24px]'>
         {title}

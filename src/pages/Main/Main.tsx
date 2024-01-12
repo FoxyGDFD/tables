@@ -15,10 +15,10 @@ const images = [miigaik, cuscovo, rosArchive, davidovsky, vitte, ntm];
 
 export const Main: FC = () => {
   return (
-    <Box className='p-[26px]'>
+    <Box>
       <CardList
         title='Нам доверяют'
-        className='grid grid-cols-6 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 justify-items-center gap-[16px] grid-flow-row'
+        className='p-[26px] grid grid-cols-6 max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 justify-items-center gap-[16px] grid-flow-row'
         list={images}
       />
       <Section
