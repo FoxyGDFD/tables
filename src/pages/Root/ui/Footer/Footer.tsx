@@ -39,9 +39,6 @@ export const Footer: FC = () => {
         <Typography as='span' className='sm:text-nowrap'>
           Москва, Наставнический переулок, 6
         </Typography>
-        <Typography as='span' className='sm:text-nowrap'>
-          Подольск, ул. Пионерская, 11/1
-        </Typography>
       </Box>
     </Box>
   );
