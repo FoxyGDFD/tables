@@ -20,7 +20,7 @@ export const Footer: FC = () => {
           buttonType='text'
           href='tel:+7 (926) 052-11-99'
         >
-          +7 (926) 052-11-99
+          +7 (901) 400-04-23
         </Button>
       </Box>
       <Box className={column}>
