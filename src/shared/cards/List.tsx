@@ -9,7 +9,7 @@ interface ListProps {
 }
 
 const getImageUrl = (url: string) =>
-  window.location.origin + '/tables' + new URL(url, import.meta.url).pathname;
+  window.location.origin + new URL(url, import.meta.url).pathname;
 
 export const CardList: FC<ListProps> = ({ title, list, className }) => (
   <>

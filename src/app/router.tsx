@@ -7,11 +7,11 @@ export const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: '/tables',
+        path: '/',
         element: <Main />,
       },
       {
-        path: '/tables/*',
+        path: '/*',
         element: <Partition />,
       },
     ],

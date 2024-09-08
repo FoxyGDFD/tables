@@ -14,7 +14,7 @@ export const Partition: FC = () => {
   const { pathname } = useLocation();
   const patrition = sections.data.find(
     ({ title }: PartitionHeaderProps) =>
-      title === decodeURI(pathname?.split('/')[2])
+      title === decodeURI(pathname?.split('/')[1])
   );
   const { setState, title } = usePartialHeaderStore();
 

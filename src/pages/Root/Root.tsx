@@ -10,7 +10,7 @@ export const Root: FC = () => {
 
   return (
     <>
-      {path === '/tables/' || path === '/tables' ? (
+      {path === '/' ? (
         <MainHeader />
       ) : (
         <PartitionHeader title={title} desctiption={desctiption} />
